@@ -39,7 +39,9 @@ include "arraydata.php"
                     <td><?= $hape["merk"] ?></td>
                     <td><?= $hape["model"] ?></td>
                     <td><?= numfmt_format_currency($fmt, $hape["harga"], "IDR") ?></td>
-                    <td><?= $hape["url_gambar"] ?></td>
+                    <td>
+                        <img src=<?= $hape["url_gambar"] ?> alt=<?= $hape['merk'] . " " .  $hape['model'] ?>>
+                    </td>
                     <td><?= $hape["spec"]["ram"] ?></td>
                     <td><?= $hape["spec"]["internal"] ?></td>
                     <td><?= $hape["spec"]["jaringan"] ?></td>
