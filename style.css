@@ -1,3 +1,45 @@
+htnml, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+.sidebar {
+    position: fixed;
+    background-color: #FFE699;
+    width: 250px;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.img-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    overflow: hidden;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.card{
+    width: 160px;
+    height: 212px;
+    background-color: #B3E5FC;
+    float: left;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+
 table, td, th {
     border: 1px solid black;
     border-collapse: collapse;
