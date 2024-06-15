@@ -17,7 +17,7 @@ include "arraydata.php"
         <div class="sidebar">
             <div class="logo">
                 <div class="img-logo">
-                    <img src="https://picsum.photos/100/100" alt="picsum">
+                    <img src="assets/ncs.jpg" alt="NCS">
                 </div>
                 <div class="store-name">
                     <h2>ENCEES STORE</h2>
@@ -28,19 +28,27 @@ include "arraydata.php"
         <div class="content">
             <div class="form">
                 <form action="compare.php" method="post">
-                    <?php foreach ($smartphones as $hape) {
+                    <?php $counter = 0;
+                    foreach ($smartphones as $hape) {
                         $combined_name = strtolower($hape['merk'] . "-" . preg_replace('/\s+/', '-', $hape['model']));
                     ?>
-
-                        <div class="card">
+                        <div class="cards">
                             <img src=<?= $hape["url_gambar"] ?> alt=<?= $combined_name ?>>
+                            <div class="phone-info">
+                                <h2><?= $hape["merk"] ?></h2>
+                                <h3><?= $hape["model"] ?></h3>
+                                <p><?= numfmt_format_currency($fmt, $hape["harga"], "IDR") ?></p>
+                            </div>
+                            <div class="checkboxes">
+                                <input type="checkbox" name="select[]" id=<?= $combined_name ?> value=<?= $counter++ ?>>
+                                <label for="select[]">Pilih</label>
+                            </div>
                         </div>
-
                     <?php } ?>
                 </form>
             </div>
 
-            <table>
+            <!-- <table>
                 <thead>
                     <tr>
                         <th rowspan="2">sku</th>
@@ -77,7 +85,7 @@ include "arraydata.php"
 
                     <?php } ?>
                 </tbody>
-            </table>
+            </table> -->
         </div>
     </div>
 </body>

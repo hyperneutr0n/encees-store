@@ -25,19 +25,57 @@ htnml, body {
     overflow: hidden;
 }
 
+.img-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+}
+
 .content {
     margin-left: 250px;
     padding: 20px;
 }
 
-.card{
+.cards{
     width: 160px;
-    height: 212px;
+    height: 340px;
     background-color: #B3E5FC;
     float: left;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px;
+    border-radius: 0 0 8px 8px;
+    padding: 0 0 10px 0;
+    margin: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.phone-info {
+    text-align: center; 
+}
+
+.phone-info h2,h3,p {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.checkboxes {
+    display: flex;
+    margin: 0;
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkboxes input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+}
+
+.checkboxes label {
+    padding-left: 3px;
+    font-size: 18px;
+    align-items: center;
 }
 
 table, td, th {
