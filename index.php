@@ -10,6 +10,12 @@ include "arraydata.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnCeEs Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -33,59 +39,27 @@ include "arraydata.php"
                         $combined_name = strtolower($hape['merk'] . "-" . preg_replace('/\s+/', '-', $hape['model']));
                     ?>
                         <div class="cards">
-                            <img src=<?= $hape["url_gambar"] ?> alt=<?= $combined_name ?>>
-                            <div class="phone-info">
-                                <h2><?= $hape["merk"] ?></h2>
-                                <h3><?= $hape["model"] ?></h3>
-                                <p><?= numfmt_format_currency($fmt, $hape["harga"], "IDR") ?></p>
-                            </div>
-                            <div class="checkboxes">
-                                <input type="checkbox" name="select[]" id=<?= $combined_name ?> value=<?= $counter++ ?>>
-                                <label for="select[]">Pilih</label>
+                            <div class="card">
+                                <img src=<?= $hape["url_gambar"] ?> alt=<?= $combined_name ?>>
+                                <div class="phone-info">
+                                    <h2><?= $hape["merk"] ?></h2>
+                                    <h3><?= $hape["model"] ?></h3>
+                                    <p><?= numfmt_format_currency($fmt, $hape["harga"], "IDR") ?></p>
+                                </div>
+                                <div class="checkboxes">
+                                    <input type="checkbox" name="select[]" class="checkbox" id=<?= $combined_name ?> value=<?= $counter++ ?>>
+                                    <label for="select[]">Pilih</label>
+                                </div>
                             </div>
                         </div>
+
                     <?php } ?>
+                    <div class="clearfix"></div>
+                    <div class="button-container">
+                        <button type="submit" class="btnCompare" disabled>BANDINGKAN</button>
+                    </div>
                 </form>
             </div>
-
-            <!-- <table>
-                <thead>
-                    <tr>
-                        <th rowspan="2">sku</th>
-                        <th rowspan="2">merk</th>
-                        <th rowspan="2">model</th>
-                        <th rowspan="2">harga</th>
-                        <th rowspan="2">url</th>
-                        <th colspan="4">spesifikasi</th>
-                    </tr>
-                    <tr>
-
-                        <th>ram</th>
-                        <th>internal</th>
-                        <th>jaringan</th>
-                        <th>baterai</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($smartphones as $hape) {
-                        $combined_name = strtolower($hape['merk'] . "-" . preg_replace('/\s+/', '-', $hape['model']));
-                    ?>
-
-                        <tr>
-                            <td><?= $hape["sku"] ?></td>
-                            <td><?= $hape["merk"] ?></td>
-                            <td><?= $hape["model"] ?></td>
-                            <td><?= numfmt_format_currency($fmt, $hape["harga"], "IDR") ?></td>
-                            <td><img src=<?= $hape["url_gambar"] ?> alt=<?= $combined_name ?>></td>
-                            <td><?= $hape["spec"]["ram"] ?></td>
-                            <td><?= $hape["spec"]["internal"] ?></td>
-                            <td><?= $hape["spec"]["jaringan"] ?></td>
-                            <td><?= $hape["spec"]["baterai"] ?></td>
-                        </tr>
-
-                    <?php } ?>
-                </tbody>
-            </table> -->
         </div>
     </div>
 </body>

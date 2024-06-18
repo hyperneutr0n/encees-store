@@ -2,6 +2,7 @@ htnml, body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat";
+    color: #333333;
 }
 
 .sidebar {
@@ -36,7 +37,7 @@ htnml, body {
     padding: 20px;
 }
 
-.cards{
+.card{
     width: 160px;
     height: 340px;
     background-color: #B3E5FC;
@@ -58,6 +59,11 @@ htnml, body {
     padding-bottom: 5px;
 }
 
+.phone-info p {
+    font-family: "Noto Serif";
+    font-size: 14px;
+}
+
 .checkboxes {
     display: flex;
     margin: 0;
@@ -77,6 +83,38 @@ htnml, body {
     font-size: 18px;
     align-items: center;
 }
+
+.clearfix {
+    clear: both;
+}
+
+.button-container {
+    clear: both;
+    justify-content: center;
+}
+
+.btnCompare {
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 10px 30px;
+    font-size: 24px;
+    background-color: #0288D1;
+    border: 0 solid white; /* supaya tidak ada border di semua browser */
+    border-radius: 999em;
+    color: whitesmoke;
+    font-family: inherit;
+}
+
+.btnCompare:disabled {
+    background-color: #B0BEC5;
+    color: #FFFFFF;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btnCompare:hover:enabled {
+    background-color: #0277BD; /* Slightly darker blue for hover */
+  }
 
 table, td, th {
     border: 1px solid black;
