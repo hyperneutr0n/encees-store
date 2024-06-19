@@ -39,15 +39,14 @@ htnml, body {
 
 .card{
     width: 160px;
-    height: 340px;
+    height: auto;
     background-color: #B3E5FC;
     float: left;
     border-radius: 0 0 8px 8px;
     padding: 0 0 10px 0;
     margin: 9px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 15px 0px rgba(0,0,0,0.45);
     overflow: hidden;
-    justify-content: space-between;
 }
 
 .phone-info {
@@ -65,23 +64,25 @@ htnml, body {
 }
 
 .checkboxes {
-    display: flex;
+    vertical-align: middle;
+    text-align: center;
     margin: 0;
     padding-top: 5px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
 .checkboxes input[type="checkbox"] {
+    vertical-align: middle;
     width: 25px;
     height: 25px;
 }
 
+.checkboxes input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+}
+
 .checkboxes label {
-    padding-left: 3px;
+    vertical-align: middle;
     font-size: 18px;
-    align-items: center;
 }
 
 .clearfix {
@@ -113,14 +114,5 @@ htnml, body {
 }
 
 .btnCompare:hover:enabled {
-    background-color: #0277BD; /* Slightly darker blue for hover */
-  }
-
-table, td, th {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 5px;
+    background-color: #0277BD;
 }
