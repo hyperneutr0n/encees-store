@@ -56,17 +56,9 @@ if (!isset($_POST['select'])) {
                 ?>
             </div>
             <div class="clearfix"></div>
+            <br>
             <a href="index.php">&lt;&lt; Kembali</a>
         </div>
-
-        <!-- <?php
-                foreach ($_POST['select'] as $key => $value) {
-                    echo $smartphones[$value]['merk'] . " " . $smartphones[$value]['model'];
-                ?>
-            <br>
-        <?php
-                }
-        ?> -->
     </div>
 </body>
 

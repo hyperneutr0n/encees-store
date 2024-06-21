@@ -1,4 +1,4 @@
-htnml, body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat";
@@ -20,8 +20,6 @@ htnml, body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
     margin: 20px auto 20px auto;
     overflow: hidden;
 }
@@ -34,7 +32,7 @@ htnml, body {
 
 .content {
     margin-left: 250px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .card{
@@ -66,8 +64,6 @@ htnml, body {
 .checkboxes {
     vertical-align: middle;
     text-align: center;
-    margin: 0;
-    padding-top: 5px;
 }
 
 .checkboxes input[type="checkbox"] {
@@ -91,7 +87,8 @@ htnml, body {
 
 .button-container {
     clear: both;
-    justify-content: center;
+    text-align: center;
+    margin: 8px;
 }
 
 .btnCompare {

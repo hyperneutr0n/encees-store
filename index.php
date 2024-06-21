@@ -34,11 +34,11 @@ include "arraydata.php"
         <div class="content">
             <div class="form">
                 <form action="compare.php" method="post">
-                    <?php $counter = 0;
-                    foreach ($smartphones as $hape) {
-                        $combined_name = strtolower($hape['merk'] . "-" . preg_replace('/\s+/', '-', $hape['model']));
-                    ?>
-                        <div class="cards">
+                    <div class="cards">
+                        <?php $counter = 0;
+                        foreach ($smartphones as $hape) {
+                            $combined_name = strtolower($hape['merk'] . "-" . preg_replace('/\s+/', '-', $hape['model']));
+                        ?>
                             <div class="card">
                                 <img src=<?= $hape["url_gambar"] ?> alt=<?= $combined_name ?>>
                                 <div class="phone-info">
@@ -51,9 +51,9 @@ include "arraydata.php"
                                     <label for="select[]">Pilih</label>
                                 </div>
                             </div>
-                        </div>
 
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                     <div class="clearfix"></div>
                     <div class="button-container">
                         <button type="submit" class="btnCompare" disabled>BANDINGKAN</button>
